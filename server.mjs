@@ -6,7 +6,11 @@ import { PORT } from "./config/index.mjs";
 import apiIndex from "./routes/index.mjs";
 import connect from "./db/index.mjs";
 
-import path from "path";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __fileName = fileURLToPath(import.meta.url);
+const __dirname = dirname(__fileName);
 
 config();
 const app = express();
@@ -17,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", apiIndex);
 
+// eslint-disable-next-line no-undef
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("build"));
 	app.get("*", (req, res) => {
@@ -26,5 +31,5 @@ if (process.env.NODE_ENV === "production") {
 
 app.listen(PORT, () => {
 	connect();
-	console.log(`Server started at port ${PORT}`);
+	console.info(`Server started at port ${PORT}`);
 });

@@ -5,8 +5,12 @@ This is a template repository for React.js projects.
 ## Features
 
 -   [x] React.js
+-   [x] React Router
+-   [x] Express.js
+-   [x] MongoDB
 -   [x] Sass
 -   [x] Prettier
+-   [x] ESLint
 
 ## Usage
 
@@ -22,7 +26,7 @@ npm install
 5.  Start development server.
 
 ```sh
-npm start
+npm run dev
 ```
 
 6.  Build for production.
@@ -31,6 +35,17 @@ npm start
 npm run build
 ```
 
+7. Check production build.
+
+```sh
+npm run serve
+```
+
+8.  Start production server.
+
+```sh
+npm start
+```
 ## License
 
 [MIT](LICENSE)
@@ -42,5 +57,9 @@ npm run build
 ## Acknowledgements
 
 -   [React.js](https://reactjs.org/)
+-   [React Router](https://reactrouter.com/)
+-   [Express.js](https://expressjs.com/)
+-   [MongoDB](https://www.mongodb.com/)
+-   [Sass](https://sass-lang.com/)
 -   [ESLint](https://eslint.org/)
 -   [Prettier](https://prettier.io/)

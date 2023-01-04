@@ -10,6 +10,7 @@ export const useContextData = () => {
 
 	// Axios Instance Configurations
 	const axiosInstance = axios.create({
+		// eslint-disable-next-line no-undef
 		baseURL: process.env.REACT_APP_BACKEND_URL,
 		headers: {
 			"x-auth-token": localStorage.getItem("token"),
@@ -34,8 +35,8 @@ export const useContextData = () => {
 		breakpoint,
 		isLoading,
 		setIsLoading,
-        isAuthenticated,
-        setIsAuthenticated,
+		isAuthenticated,
+		setIsAuthenticated,
 		axiosInstance,
 	};
 };
