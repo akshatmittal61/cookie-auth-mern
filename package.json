@@ -1,5 +1,5 @@
 {
-  "name": "reactjs-template",
+  "name": "mern-template",
   "version": "0.1.0",
   "private": "false",
   "description": "A template for MERN stack development",
@@ -41,7 +41,6 @@
   "bugs": {
     "url": "https://github.com/akshatmittal61/mern-template/issues"
   },
-  "homepage": "https://github.com/akshatmittal61/mern-template#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
