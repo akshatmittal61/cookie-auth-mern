@@ -1,6 +1,6 @@
-# React.js Template
+# MERN Stack Template
 
-This is a template repository for React.js projects.
+A template for MERN stack projects.
 
 ## Features
 
