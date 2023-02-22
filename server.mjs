@@ -4,7 +4,7 @@ import { config } from "dotenv";
 import { PORT } from "./config/index.mjs";
 
 import apiIndex from "./routes/index.mjs";
-// import connect from "./db/index.mjs";
+import connect from "./db/index.mjs";
 
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -30,6 +30,6 @@ if (process.env.NODE_ENV === "production") {
 } // Serve the build files if the app is in production mode
 
 app.listen(PORT, () => {
-	// connect();
+	connect();
 	console.info(`Server started at port ${PORT}`);
 });
