@@ -52,7 +52,6 @@ After that, follow the steps below:
 ## Environment Variables:
 Building the .env
 - **MONGO_CONNECTION_URL:** Create a database in MongoDB cluster and paste the connection string in here
-- **PORT:** Assign a PORT to run the backend server (usually `4000` or `5000`)
 - **REACT_APP_BACKEND_URL:** Create the backend URL for which React App will send the server requests to.
 
 Please ensure that your pull request adheres to the following guidelines:
