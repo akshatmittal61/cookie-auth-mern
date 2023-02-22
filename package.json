@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "node server.mjs",
-    "react": "PORT=3000 react-scripts start",
+    "react": "react-scripts start",
     "server": "nodemon server.mjs",
     "build": "react-scripts build",
     "serve": "serve -s build",
