@@ -1,3 +1,5 @@
+import regex from "../constants/regex.mjs";
+
 const validateEmail = (req, res, next) => {
 	try {
 		const { email } = req.body;
@@ -20,6 +22,8 @@ const validateEmail = (req, res, next) => {
 				message:
 					"Email should not contain any newlines or carriage returns",
 			});
+		if (!regex.email.test(email))
+			return res.status(400).json({ message: "Invalid Email" });
 		next();
 	} catch (error) {
 		console.error(error);
@@ -32,9 +36,9 @@ const validatePassword = (req, res, next) => {
 		const { password } = req.body;
 		if (!password)
 			return res.status(400).json({ message: "Password is required" });
-		if (password.length < 6)
+		if (password.length < 8)
 			return res.status(400).json({
-				message: "Password should be atleast 6 characters long",
+				message: "Password should be atleast 8 characters long",
 			});
 		// check if password contains atleast one number
 		if (!/\d/.test(password))
@@ -77,6 +81,11 @@ const validatePassword = (req, res, next) => {
 			return res.status(400).json({
 				message: "Password should not contain any carriage returns",
 			});
+		if (!regex.password.test(password))
+			return res.status(400).json({
+				message:
+					"Password should be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character",
+			});
 		next();
 	} catch (error) {
 		console.error(error);
@@ -101,6 +110,11 @@ const validatePhone = (req, res, next) => {
 		if (/\s|\t/.test(phone))
 			return res.status(400).json({
 				message: "Phone should not contain any spaces or tabs",
+			});
+		if (!regex.phone.test(phone))
+			return res.status(400).json({
+				message:
+					"Phone number should contain only numbers and have a length of 10 characters",
 			});
 		next();
 	} catch (error) {

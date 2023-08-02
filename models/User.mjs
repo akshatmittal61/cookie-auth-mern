@@ -1,9 +1,5 @@
 import mongoose from "mongoose";
-
-export const USER_ROLES = {
-	ADMIN: "admin",
-	USER: "user",
-};
+import { USER_ROLES } from "../constants/enums.mjs";
 
 const UserSchema = new mongoose.Schema(
 	{
@@ -25,27 +21,15 @@ const UserSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		verified: {
-			type: Boolean,
-			default: false,
-		},
 		role: {
 			type: String,
 			enum: Object.values(USER_ROLES),
-			default: USER_ROLES.STUDENT,
+			default: USER_ROLES.USER,
 		},
 		avatar: {
 			type: String,
 			default:
 				"https://raw.githubusercontent.com/akshatmittal61/mern-template/master/images/user.svg",
-		},
-		phone: {
-			type: String,
-			required: false,
-		},
-		bio: {
-			type: String,
-			required: false,
 		},
 	},
 	{ timestamps: true }
