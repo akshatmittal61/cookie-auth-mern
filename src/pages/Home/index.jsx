@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { stylesConfig } from "../../utils";
+import { stylesConfig } from "../../utils/functions";
 import Typography from "../../library/Typography";
 import Button from "../../library/Button";
-import { AiOutlineArrowRight } from "react-icons/ai";
 
 const classes = stylesConfig(styles, "home");
 
@@ -24,13 +23,12 @@ const Home = () => {
 			</Typography>
 			<Button
 				size="large"
-				icon={<AiOutlineArrowRight />}
 				iconPosition="right"
 				onClick={() => {
 					window.open("https://akshatmittal61.vercel.app", "_blank");
 				}}
 			>
-				Contact Us
+				Contact The Developer
 			</Button>
 		</main>
 	);

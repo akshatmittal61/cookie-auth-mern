@@ -1,4 +1,4 @@
-import { stylesConfig } from "../../utils";
+import { stylesConfig } from "../../utils/functions";
 import styles from "./styles.module.scss";
 import React from "react";
 
