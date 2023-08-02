@@ -11,9 +11,3 @@ export const warn = (message) => console.warn(message);
 
 // The function to log an info
 export const info = (message) => console.info(message);
-
-// The function to log a table
-export const table = (message) => console.table(message);
-
-// The function to log a clear
-export const clear = () => console.clear();
