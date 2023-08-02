@@ -3,23 +3,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 @font-face {
 	font-family: "Google Sans";
 	src: url("../fonts/Google-Sans/GoogleSans-Regular.eot");
-	src: url("../fonts/Google-Sans/GoogleSans-Regular.eot?#iefix") format("embedded-opentype"),
+	src: url("../fonts/Google-Sans/GoogleSans-Regular.eot?#iefix")
+			format("embedded-opentype"),
 		url("../fonts/Google-Sans/GoogleSans-Regular.woff2") format("woff2"),
 		url("../fonts/Google-Sans/GoogleSans-Regular.woff") format("woff"),
 		url("../fonts/Google-Sans/GoogleSans-Regular.ttf") format("truetype"),
-		url("../fonts/Google-Sans/GoogleSans-Regular.svg#GoogleSans-Regular") format("svg");
+		url("../fonts/Google-Sans/GoogleSans-Regular.svg#GoogleSans-Regular")
+			format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
-
 
 /* 
     Font Family
@@ -55,10 +56,7 @@
         - Bold Italic
  */
 
-$types: (
-	heading,
-	body
-);
+$types: (heading, body);
 
 $variants: (
 	display,
@@ -74,14 +72,7 @@ $variants: (
 	small
 );
 
-$formats: (
-	regular,
-	medium,
-	bold,
-	underlined,
-	italic,
-	bold-italic
-);
+$formats: (regular, medium, bold, underlined, italic, bold-italic);
 
 @mixin typography($type: body, $variant: normal, $format: regular) {
 	@if $type ==heading {
@@ -117,9 +108,7 @@ $formats: (
 				font-size: 48px;
 				line-height: 56px;
 			}
-		}
-
-		@else if $variant ==subtitle {
+		} @else if $variant ==subtitle {
 			font-size: 22px;
 			font-weight: 400;
 			line-height: 28px;
@@ -148,9 +137,7 @@ $formats: (
 				font-size: 28px;
 				line-height: 32px;
 			}
-		}
-
-		@else if $variant ==title-1 {
+		} @else if $variant ==title-1 {
 			font-size: 28px;
 			font-weight: 700;
 			line-height: 32px;
@@ -179,9 +166,7 @@ $formats: (
 				font-size: 32px;
 				line-height: 40px;
 			}
-		}
-
-		@else if $variant ==title-2 {
+		} @else if $variant ==title-2 {
 			font-size: 22px;
 			font-weight: 700;
 			line-height: 28px;
@@ -210,9 +195,7 @@ $formats: (
 				font-size: 24px;
 				line-height: 30px;
 			}
-		}
-
-		@else if $variant ==title-3 {
+		} @else if $variant ==title-3 {
 			font-size: 16px;
 			font-weight: 700;
 			line-height: 20px;
@@ -241,9 +224,7 @@ $formats: (
 				font-size: 22px;
 				line-height: 28px;
 			}
-		}
-
-		@else if $variant ==title-4 {
+		} @else if $variant ==title-4 {
 			font-size: 14px;
 			font-weight: 700;
 			line-height: 20px;
@@ -272,9 +253,7 @@ $formats: (
 				font-size: 16px;
 				line-height: 20px;
 			}
-		}
-
-		@else if $variant ==eyebrow {
+		} @else if $variant ==eyebrow {
 			font-size: 12px;
 			font-weight: 600;
 			line-height: 16px;
@@ -306,9 +285,7 @@ $formats: (
 				line-height: 20px;
 			}
 		}
-	}
-
-	@else if $type ==body {
+	} @else if $type ==body {
 		font-family: var(--font-red-hat-text);
 		color: var(--color-text-black);
 
@@ -341,9 +318,7 @@ $formats: (
 				font-size: 18px;
 				line-height: 24px;
 			}
-		}
-
-		@else if $variant ==large {
+		} @else if $variant ==large {
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 24px;
@@ -372,9 +347,7 @@ $formats: (
 				font-size: 16px;
 				line-height: 24px;
 			}
-		}
-
-		@else if $variant ==medium {
+		} @else if $variant ==medium {
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 20px;
@@ -403,9 +376,7 @@ $formats: (
 				font-size: 14px;
 				line-height: 20px;
 			}
-		}
-
-		@else if $variant ==small {
+		} @else if $variant ==small {
 			font-size: 12px;
 			font-weight: 400;
 			line-height: 16px;
@@ -438,26 +409,16 @@ $formats: (
 
 		@if $format ==regular {
 			font-style: normal;
-		}
-
-		@else if $format ==medium {
+		} @else if $format ==medium {
 			font-weight: 500;
-		}
-
-		@else if $format ==bold {
+		} @else if $format ==bold {
 			font-weight: 700;
-		}
-
-		@else if $format ==underlined {
+		} @else if $format ==underlined {
 			text-decoration: underline;
 			font-weight: 500;
-		}
-
-		@else if $format ==italic {
+		} @else if $format ==italic {
 			font-style: italic;
-		}
-
-		@else if $format ==bold-italic {
+		} @else if $format ==bold-italic {
 			font-weight: 700;
 			font-style: italic;
 		}
