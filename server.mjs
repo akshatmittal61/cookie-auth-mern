@@ -4,7 +4,7 @@ import { config } from "dotenv";
 import { PORT } from "./config/index.mjs";
 
 import connect from "./db/index.mjs";
-import apiIndex from "./routes/index.mjs";
+import routes from "./routes/index.mjs";
 
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/api", apiIndex);
+app.use("/api", routes);
 
 app.use(express.static("build"));
 app.get("*", (req, res) => {
