@@ -32,3 +32,6 @@ yarn-error.log*
 *.js.map
 *.ts.map
 *.tsx.map
+
+package-lock.json
+yarn.lock

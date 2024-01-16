@@ -2,12 +2,9 @@ import { RESPONSE_MESSAGES } from "../constants/enums.mjs";
 
 const index = async (req, res) => {
 	try {
-		const result = await fetch(
-			"https://jsonplaceholder.typicode.com/users"
-		).then((resp) => resp.json());
+		console.log(req.cookies);
 		return res.status(200).json({
 			message: RESPONSE_MESSAGES.SUCCESS,
-			data: result,
 		});
 	} catch (error) {
 		console.error(error);

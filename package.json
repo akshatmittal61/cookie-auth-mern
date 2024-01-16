@@ -11,6 +11,7 @@
 		"axios": "^1.2.2",
 		"bcrypt": "^5.1.0",
 		"concurrently": "^7.6.0",
+		"cookie-parser": "^1.4.6",
 		"cors": "^2.8.5",
 		"dotenv": "^16.0.3",
 		"express": "^4.18.2",
@@ -31,7 +32,6 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"dev": "concurrently \"npm run react\" \"npm run server\"",
-		"prepare": "npx husky-init && npm install && husky install",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx"
