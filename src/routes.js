@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const protectedRoutes = [
 	{
@@ -20,6 +21,10 @@ const nonProtectedRoutes = [
 	{
 		path: "/login",
 		component: <Login />,
+	},
+	{
+		path: "/register",
+		component: <Register />,
 	},
 	{
 		path: "*",

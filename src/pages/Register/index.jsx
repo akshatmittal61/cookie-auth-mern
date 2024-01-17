@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { stylesConfig } from "../../utils/functions";
-import { http, setCookie } from "../../utils/http";
+import { http } from "../../utils/http";
 import Button from "../../library/Button";
 import Input from "../../library/Input";
 
-const classes = stylesConfig(styles, "login");
+const classes = stylesConfig(styles, "register");
 
-const LoginPage = () => {
+const RegisterPage = () => {
 	const [loading, setLoading] = useState(false);
 	const [creds, setCreds] = useState({
+		name: "",
 		email: "",
 		password: "",
 	});
@@ -25,10 +26,8 @@ const LoginPage = () => {
 		e.preventDefault();
 		try {
 			setLoading(true);
-			const res = await http.post("/auth/login", creds);
-			console.log(res.data, res.cookies);
-			// use res.headers.Set-Cookie to set cookie
-			setCookie("token", res.headers["Set-Cookie"][0]);
+			const { data } = await http.post("/auth/register", creds);
+			console.log(data);
 		} catch (error) {
 			console.log(error);
 		} finally {
@@ -38,8 +37,14 @@ const LoginPage = () => {
 
 	return (
 		<main className={classes("")}>
-			<h1>Login Page</h1>
+			<h1>Register Page</h1>
 			<form onSubmit={handleSubmit}>
+				<Input
+					type="text"
+					name="name"
+					placeholder="Name"
+					onChange={handleChange}
+				/>
 				<Input
 					type="email"
 					name="email"
@@ -53,11 +58,11 @@ const LoginPage = () => {
 					onChange={handleChange}
 				/>
 				<Button loading={loading} type="submit">
-					Login
+					Register
 				</Button>
 			</form>
 		</main>
 	);
 };
 
-export default LoginPage;
+export default RegisterPage;
